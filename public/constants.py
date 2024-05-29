@@ -187,7 +187,7 @@ di = DependencyInjection({"api": "https://api.com/v1"})
 from zenaura.client.component import Component
 from zenaura.client.mutator import mutator
 
-class DependencyInjection(Component):
+class Lifecycles(Component):
 	
 	@mutator
 	async def attached(self):

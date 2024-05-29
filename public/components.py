@@ -82,7 +82,6 @@ class DropDown(Component):
         await asyncio.sleep(0.8)
         await zenaura_dom.render(self)
         self.state.features[0].active = True
-        self.state.features[9].active = False
         await self.animate_transition(0)
 
 

@@ -182,7 +182,7 @@ di = DependencyInjection({"api": "https://api.com/v1"})
 """
         ),
     Feature(
-        "Lifecycle Methods", True, "lifecycle_methods", "Gain fine-grained control over the behavior of your components at different stages of their existence. Lifecycle methods, such as `attached`, `on_mutation`, and `on_settled`, allow you to execute code when a component is created, before it updates, or after it updates in the DOM, enabling you to perform tasks like fetching data, initializing state, and cleaning up resources.",
+        "Lifecycle Methods", False, "lifecycle_methods", "Gain fine-grained control over the behavior of your components at different stages of their existence. Lifecycle methods, such as `attached`, `on_mutation`, and `on_settled`, allow you to execute code when a component is created, before it updates, or after it updates in the DOM, enabling you to perform tasks like fetching data, initializing state, and cleaning up resources.",
         """
 from zenaura.client.component import Component
 from zenaura.client.mutator import mutator

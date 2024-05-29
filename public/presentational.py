@@ -10,13 +10,13 @@ def NavItem(href, text):
 def NavList(items):
     return Node("ul", children=items)
  
-def Image(src, alt, width, height):
+def Image(src, alt, width, height, classname=""):
     return Builder("img").with_attributes(
         src=src,
         alt=alt,
         width=width,
-        height=height
-    ).build()
+        height=height,
+    ).with_attribute("class", classname).build()
 
 def Header2(text):
     return Builder('h2').with_text(text).build()
@@ -28,20 +28,6 @@ def Section(children, class_name="intro"):
     section = Builder('section').with_attribute('class', class_name).build()
     section.children = children
     return section
-
-class Header(Component):
-    def render(self):
-        return Builder("header").with_child(
-            Builder("nav").with_children(
-                Node(text="v0.9.93-alpha"), 
-                NavList([
-                NavItem("#", "Learn"),
-                NavItem("#", "API Reference"),
-                ])
-            ).build()
-        ).build()
-
-
 
 # features menu
     
@@ -72,6 +58,7 @@ def ExapandableContentButton(btn, content, is_visible):
     active = "controlsActive" if is_visible else "controls"
     content = Paragraph(content, "featureParagraph")
     content.attributes.append(Attribute('style', style))
+    content.attributes.append(Attribute("active", is_visible))
     return Div(active, [
         btn,
         content
@@ -105,4 +92,5 @@ def ExpandableContent(code, is_visible, class_name=''):
     ])
     content.attributes.append(Attribute('style', style))
     content.attributes.append(Attribute('class', class_name))
+    content.attributes.append(Attribute('active', is_visible))
     return content

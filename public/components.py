@@ -1,11 +1,22 @@
 import asyncio 
 from zenaura.client.component import Component
 from zenaura.client.mutator import mutator
-from dataclasses import fields
-from public.data import Features
 from public.presentational import * 
 from public.constants import init_state_features
 from zenaura.client.dom import zenaura_dom
+
+class Header(Component):
+    def render(self):
+        return Builder("header").with_child(
+            Builder("nav").with_children(
+                NavList([
+                Image("./public/logo.png", "zenaura", "40", "40", "navbarLogo"),
+                NavItem("#", "Learn"),
+                NavItem("#", "API Reference"),
+                ])
+            ).build()
+        ).build()
+    
 
 class IntroSection(Component):
     def render(self):
@@ -28,7 +39,6 @@ class DropDown(Component):
         self.state = init_state_features
         self.instance_name = "features_drop_down"
 
-    @mutator
     async def toggle(self, event):
         active = 0
         for idx, feature in enumerate(self.state.features):
@@ -68,6 +78,14 @@ class DropDown(Component):
         # Re-render component to apply the final classes
         await zenaura_dom.render(self)
 
+    async def attached(self):
+        await asyncio.sleep(0.8)
+        await zenaura_dom.render(self)
+        self.state.features[0].active = True
+        self.state.features[9].active = False
+        await self.animate_transition(0)
+
+
 
     def render(self):
         return Section([
@@ -93,11 +111,11 @@ class DropDown(Component):
                         ) for feature in self.state.features
                     ]),
                     Div("column", [
-                        ExpandableContent(
+                     ExpandableContent(
                             feature.code_example, 
                             feature.active,
                             feature.class_name
-                        ) for feature in self.state.features
+                        ) for feature in self.state.features 
                     ])
                 ])
             ])

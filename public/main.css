@@ -20,39 +20,39 @@ body.loading .loader {
   opacity: 1;
 }
 html{ overflow-y: scroll;}
-  
-  header {
-    background-color: #282c34;
-    color: white;
-    padding: 0.3rem;
-  }
-  
-  header.light-theme {
-    background-color: #f0f0f0;
-    color: #000;
-  }
-  
-  header.dark-theme {
-    background-color: #1f232a;
-    color: #eee;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: inline-flex;
-    gap: 1rem;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  nav a:hover {
-    border-bottom: 1px solid  #f0f0f0;
-  }
-  main {
-    padding: 2rem;
-  }
+
+header {
+  background-color: #282c34;
+  color: white;
+  padding: 0.3rem;
+}
+
+header.light-theme {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+header.dark-theme {
+  background-color: #1f232a;
+  color: #eee;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  border-bottom: 1px solid  #f0f0f0;
+}
+main {
+  padding: 2rem;
+}
   
 h1, h2, h3 {
     font-weight: 600; 
@@ -61,21 +61,37 @@ h1, h2, h3 {
 } 
 
 p {
-  font-style: bold;
   color: #76ABAE;
+  font-weight: 500;
+  line-height: 1.5rem
+}
+
+code {
+  border-radius: 15px;
 }
 .intro {
-text-align: center;
-background-color: #31363F;
-padding-top: 30px;
-padding-bottom: 30px;
+  text-align: center;
+  background-color: #31363F;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width : 100%;
+}
+
+.introRow {
+  display: flex;
+  max-width: fit-content;
+  margin-inline: auto;
+}
+
+.introHeaders h1 {
+  font-size: 2.5rem;
+  color: #76ABAE
 }
 
 .features {
   background-color: #222831 ;
   padding-top: 30px;
-  padding-bottom: 30px;
-  min-height: 800px;
+  min-height: 1200px;
 }
 
   
@@ -84,206 +100,317 @@ padding-bottom: 30px;
 }
   
 .code-example {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Code wider than preview */
-    gap: 1.5rem;
-    padding: 1rem;
-    border-radius: 8px; /* Rounded corners */
-    background-color: #76ABAE;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Code wider than preview */
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  background-color: #76ABAE;
 }
 
 .code-example pre {
-    font-family: monospace;
-    overflow-x: auto;
-    white-space: pre-wrap;
+  font-family: monospace;
+  overflow-x: auto;
+  white-space: pre-wrap;
 }
   
   
-  .video-preview {
+.video-preview {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.video-preview.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+.video-preview.dark-theme {
+  background-color: #222;
+  color: #fff;
+}
+
+.video-preview img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}
+
+/*  features showcase */
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.subtitle {
+  text-align: center;
+  color: #C0C0C0;
+  font-style: italic;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 1;
+}
+.model-header {
+  font-size: 1.5em;
+}
+.expand-btn {
+  background: none;
+  border: none;
+  color: #EEEEEE;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.expand-btn::after {
+  color: #76ABAE;
+}
+.expandable-content {
+  display: none;
+  margin-top: 10px;
+}
+.expandable-content p {
+  font-size: 1em;
+  color: #B0B0B0;
+  /* This timing applies on the way IN */
+  transition-timing-function: ease-in-out;
+
+  /* A litttttle slower on the way in */
+  transition: 0.8s;
+}
+.code-section {
+  border-radius: 15px;
+  border: 1px solid #76ABAE;
+
+}
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  color: #B0B0B0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+.tab-btn.active {
+  color: #00B0FF;
+  border-bottom: 2px solid #00B0FF;
+}
+
+pre {
+  position: relative;
+  background: none;
+  border: none;
+  color: #E8E8E8;
+  font-size: 1em;
+  white-space: pre-wrap;
+  width: 450px;
+  border-radius: 15px;
+  left: 10px;
+  top: 15px;
+}
+
+
+.documentation-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #00FF5F;
+  color: #1D2733;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.controls {
+  flex-direction: column;
+  border-left: 3px solid #31363F;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  /* This timing applies on the way IN */
+  transition-timing-function: ease-in-out;
+
+  /* A litttttle slower on the way in */
+  transition: 0.8s;
+  
+}
+
+.examplesPara {
+  margin-bottom: 100px;
+  max-width: fit-content;
+}
+.controlsActive {
+  border-left: 3px solid #EEEEEE;
+}
+
+.featureParagraph {
+  max-width: 400px;
+  text-align: left;
+  margin-left: 10px
+
+}
+
+.intro-btn-2 {
+  background: inherit;
+  color: #1D2733;
+  border: 1px solid #76ABAE;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 3px;
+  color: #EEEEEE;
+}
+
+.intro-btn-1 {
+  background: #76ABAE;
+  color: #1D2733;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.intro-btn-1:hover {
+  background: #5F9293; /* Slightly darker teal on hover */
+}
+
+/* Active Effect (while button is pressed) */
+.intro-btn-1:active {
+  background: #4D7677; /* Even darker teal when active */
+}
+
+.intro-btn-2:hover {
+  background: #5F9293; /* Slightly darker teal on hover */
+}
+
+/* Active Effect (while button is pressed) */
+.intro-btn-2:active {
+  background: #4D7677; /* Even darker teal when active */
+}
+
+
+/*  code wrapper animation */
+
+.codeWrapper {
+  transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+  opacity: 1;
+  transform: translateY(0) rotateY(0deg);
+}
+
+/* Initial state for entering element */
+.codeWrapper-enter {
+  opacity: 0;
+  transform: translateY(-20px) rotateY(-90deg);
+}
+
+/* State for entering element after it's inserted in the DOM */
+.codeWrapper-enter-active {
+  opacity: 1;
+  transform: translateY(0) rotateY(0deg);
+}
+
+/* Initial state for exiting element */
+.codeWrapper-exit {
+  opacity: 1;
+  transform: translateY(0) rotateY(0deg);
+}
+
+/* State for exiting element after transition starts */
+.codeWrapper-exit-active {
+  opacity: 0;
+  transform: translateY(20px) rotateY(90deg);
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+  background-color:  #76ABAE;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .code-example {
+    grid-template-columns: 1fr; /* Stack code and preview */
+  }
+}
+
+@media (max-width: 900px) {
+  nav ul {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center horizontally */
-    gap: 0.5rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-  }
-  
-  .video-preview.light-theme {
-    background-color: #fff;
-    color: #000;
-  }
-  
-  .video-preview.dark-theme {
-    background-color: #222;
-    color: #fff;
-  }
-  
-  .video-preview img {
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-  }
-
-  /*  features showcase */
-
-  .container {
-    width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  .subtitle {
-    text-align: center;
-    color: #C0C0C0;
-    font-style: italic;
-  }
-  .row {
-    display: flex;
-  }
-  .column {
-    flex: 1;
-  }
-  .model-header {
-    font-size: 1.5em;
-  }
-  .expand-btn {
-    background: none;
-    border: none;
-    color: #EEEEEE;
-    cursor: pointer;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 4px;
-  }
-
-  .expand-btn::after {
-    color: #76ABAE;
-  }
-  .expandable-content {
-    display: none;
-    margin-top: 10px;
-  }
-  .expandable-content p {
-    font-size: 1em;
-    color: #B0B0B0;
-    /* This timing applies on the way IN */
-    transition-timing-function: ease-in-out;
-
-    /* A litttttle slower on the way in */
-    transition: 0.8s;
-  }
-  .code-section {
-    background: #282c34;
-    padding: 20px;
-    border-radius: 8px;
-    position: relative;
-
-  }
-  .tabs {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 20px;
-  }
-  .tab-btn {
-    background: none;
-    border: none;
-    color: #B0B0B0;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  .tab-btn.active {
-    color: #00B0FF;
-    border-bottom: 2px solid #00B0FF;
-  }
-  pre {
-    background: none;
-    border: none;
-    color: #E8E8E8;
-    font-size: 1em;
-    white-space: pre-wrap;
-  }
-  .documentation-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: #00FF5F;
-    color: #1D2733;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  .column {
-    float: left;
-    width: 50%;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .controls {
     flex-direction: column;
-    border-left: 3px solid #31363F;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    /* This timing applies on the way IN */
-    transition-timing-function: ease-in-out;
-
-    /* A litttttle slower on the way in */
-    transition: 0.8s;
-    
+    gap: 0.5rem;
   }
 
-  .controlsActive {
-    border-left: 3px solid #EEEEEE;
-  }
-
-  .featureParagraph {
-    max-width: 400px;
-    text-align: left;
-    margin-left: 10px
-
-  }
-
-  .intro-btn-2 {
-    background: inherit;
-    color: #1D2733;
-    border: 1px solid #76ABAE;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 3px;
-  }
-
-  .intro-btn-1 {
-    background: #76ABAE;
-    color: #1D2733;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 3px;
-  }
-
-  .intro-btn-1:hover {
-    background: #5F9293; /* Slightly darker teal on hover */
+  .introHeaders h1 {
+    font-size: 2rem;
   }
   
-  /* Active Effect (while button is pressed) */
-  .intro-btn-1:active {
-    background: #4D7677; /* Even darker teal when active */
+  .container {
+    width: 100%;
+    padding: 10px;
   }
-  
-  .intro-btn-2:hover {
-    background: #5F9293; /* Slightly darker teal on hover */
+
+  .row {
+    flex-direction: column;
   }
-  
-  /* Active Effect (while button is pressed) */
-  .intro-btn-2:active {
-    background: #4D7677; /* Even darker teal when active */
+
+  .column {
+    width: 100%;
   }
-  
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  .introHeaders h1 {
+    font-size: 1.5rem;
+  }
+
+  .code-example {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    padding: 5px 10px;
+  }
+
+  .documentation-btn {
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+  }
+}

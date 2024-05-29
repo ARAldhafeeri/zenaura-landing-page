@@ -7,6 +7,7 @@ class Feature:
     name: str
     description: str
     code_example: str 
+    class_name: str = ""
 
 @dataclass
 class Features:

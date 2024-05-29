@@ -9,10 +9,11 @@ header = Header()
 intro_section = IntroSection()
 
 features_drop_down = DropDown()
+footer = Footer()
 
 # App and routing
 router = App()
-home_page = Page([header, intro_section, features_drop_down])
+home_page = Page([header, intro_section, features_drop_down, footer])
 
 router.add_route(Route(
     title="Developer-Focused | Zenaura",

@@ -10,10 +10,12 @@ def NavItem(href, text):
 def NavList(items):
     return Node("ul", children=items)
  
-def Image(src, alt):
+def Image(src, alt, width, height):
     return Builder("img").with_attributes(
         src=src,
-        alt=alt
+        alt=alt,
+        width=width,
+        height=height
     ).build()
 
 def Header2(text):
@@ -77,7 +79,9 @@ def ExapandableContentButton(btn, content, is_visible):
     ])
 
 def CodeBlock(code):
-    return Builder('pre').with_child(Builder('code').with_attribute("class", "language-python").with_text(code).build()).build()
+    return Div("codeWrapper", [
+        Builder('pre').with_child(Builder('code').with_attribute("class", "language-python").with_text(code).build()).build()
+    ])
 
 def Tabs(tabs):
     return Div('tabs', [Button('tab-btn', tab) for tab in tabs])
@@ -92,7 +96,7 @@ def TableRow(content):
 def Table(rows):
     return Div('table row', rows)
 
-def ExpandableContent( code, is_visible):
+def ExpandableContent(code, is_visible, class_name=''):
     style = 'display: none;' if not is_visible else 'display: block;'
     content = Div('expandable-content', [
         Div('code-section ', [
@@ -100,4 +104,5 @@ def ExpandableContent( code, is_visible):
         ])
     ])
     content.attributes.append(Attribute('style', style))
+    content.attributes.append(Attribute('class', class_name))
     return content

@@ -12,7 +12,7 @@
       name="description"
       content="this app created with zenaura"
     />
-     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+ <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 <link rel="stylesheet" href="public/gigavolt.min.css">
 <script src="./public/python.min.js"></script>
 <script src="./public/highlight.min.js"></script>
@@ -25,111 +25,172 @@
   </head>
   <body>
     <div id="root">
-        <div data-zenaura="72e7e09f"><header data-zenaura="6d9a6c21"><nav data-zenaura="6d9a6c2100">v0.9.93-alpha<ul data-zenaura="6d9a6c210011"><li data-zenaura="6d9a6c21001120"><a data-zenaura="6d9a6c2100112030" href="#">Learn</a></li><li data-zenaura="6d9a6c21001121"><a data-zenaura="6d9a6c2100112130" href="#">API Reference</a></li></ul></nav></header><section data-zenaura="9c6e3bc4" class="intro"><img data-zenaura="9c6e3bc400" src="public/logo.svg" alt="zenaura logo"><h1 data-zenaura="9c6e3bc401">The Python library for building modern web UI.</h1><button data-zenaura="9c6e3bc402" class="intro-btn-1">Start Creating</button><button data-zenaura="9c6e3bc403" class="intro-btn-2">API Reference</button></section><section data-zenaura="e772b096" class="features"><div data-zenaura="e772b09600" class="container"><h1 data-zenaura="e772b0960010">Create modular user interfaces using components</h1><p data-zenaura="e772b0960011">
-                    Zenaura empowers developers to craft user interfaces entirely
-                    using Python. With Zenaura, they can effortlessly 
-                    decompose their code into modular components, 
-                    define pages mapped to routes, all within an 
-                    Object-oriented paradigm. 
-                    This approach enhances maintainability, scalability, 
-                    and performance, offering a seamless development experience.
-                </p><div data-zenaura="e772b0960012" class="row"><div data-zenaura="e772b096001220" class="column"><div data-zenaura="e772b09600122030" class="controlsActive"><button data-zenaura="e772b0960012203040" class="expand-btn"py-click="features_drop_down.toggle"  name="components">Stateful Components</button><p data-zenaura="e772b0960012203041" class="featureParagraph" style="display: block;">Empower your application with the ability to manage dynamic content that reacts to user interactions and internal state changes. Stateful components can store data, update their appearance, and trigger actions based on events, making them essential for building interactive and responsive user interfaces.</p></div><div data-zenaura="e772b09600122031" class="controls"><button data-zenaura="e772b0960012203140" class="expand-btn"py-click="features_drop_down.toggle"  name="pages">Pages</button><p data-zenaura="e772b0960012203141" class="featureParagraph" style="display: none;">Structure your application as a collection of distinct pages, each representing a different view or section. This approach enhances user navigation and allows you to organize your components and UI elements logically, improving the overall user experience.</p></div><div data-zenaura="e772b09600122032" class="controls"><button data-zenaura="e772b0960012203240" class="expand-btn"py-click="features_drop_down.toggle"  name="server_side_rendering">Server-Side Rendering (SSR)</button><p data-zenaura="e772b0960012203241" class="featureParagraph" style="display: none;">Leverage the power of server-side rendering to generate HTML on the server before sending it to the client. SSR can significantly improve initial page load times, enhance SEO (Search Engine Optimization) by making your content more accessible to search engines, and provide a smoother user experience, especially on slower connections or devices.</p></div><div data-zenaura="e772b09600122033" class="controls"><button data-zenaura="e772b0960012203340" class="expand-btn"py-click="features_drop_down.toggle"  name="asynchronous_virtual_dom">Asynchronous Virtual DOM</button><p data-zenaura="e772b0960012203341" class="featureParagraph" style="display: none;">Optimize your application&#x27;s UI updates by employing an asynchronous virtual DOM. This technique allows the framework to intelligently track changes in your component data and update only the necessary parts of the real DOM, minimizing unnecessary re-renders and leading to a more performant and responsive user interface.</p></div><div data-zenaura="e772b09600122034" class="controls"><button data-zenaura="e772b0960012203440" class="expand-btn"py-click="features_drop_down.toggle"  name="built_in_router">Built-in Router</button><p data-zenaura="e772b0960012203441" class="featureParagraph" style="display: none;">Enable seamless navigation within your application using a built-in router. Routers handle the mapping of URLs to specific components or pages, allowing users to move between different sections of your application without requiring full page reloads, resulting in a smoother and more engaging user experience.</p></div><div data-zenaura="e772b09600122035" class="controls"><button data-zenaura="e772b0960012203540" class="expand-btn"py-click="features_drop_down.toggle"  name="signals">Signals</button><p data-zenaura="e772b0960012203541" class="featureParagraph" style="display: none;">Simplify the management of application state and facilitate communication between components by using signals. Signals provide a reactive way to propagate data changes throughout your application, allowing components to react to updates and stay in sync without complex manual event handling.</p></div><div data-zenaura="e772b09600122036" class="controls"><button data-zenaura="e772b0960012203640" class="expand-btn"py-click="features_drop_down.toggle"  name="dependency_injection">Dependency Injection (DI)</button><p data-zenaura="e772b0960012203641" class="featureParagraph" style="display: none;">Streamline the management of dependencies between components using dependency injection. DI makes your code more modular, testable, and maintainable by allowing components to declare their dependencies explicitly and receive them from an external injector, promoting loose coupling and flexibility.</p></div><div data-zenaura="e772b09600122037" class="controls"><button data-zenaura="e772b0960012203740" class="expand-btn"py-click="features_drop_down.toggle"  name="lifecycle_methods">Lifecycle Methods</button><p data-zenaura="e772b0960012203741" class="featureParagraph" style="display: none;">Gain fine-grained control over the behavior of your components at different stages of their existence. Lifecycle methods, such as `onMount`, `onUpdate`, and `onUnmount`, allow you to execute code when a component is created, updated, or removed from the DOM, enabling you to perform tasks like fetching data, initializing state, and cleaning up resources.</p></div><div data-zenaura="e772b09600122038" class="controls"><button data-zenaura="e772b0960012203840" class="expand-btn"py-click="features_drop_down.toggle"  name="simplified_cognition">Simplified Cognition</button><p data-zenaura="e772b0960012203841" class="featureParagraph" style="display: none;">Enjoy a smoother learning curve and faster development process with simplified cognitive load. With intuitive APIs, clear documentation, and well-structured code patterns, you can focus on building your application logic instead of struggling with complex framework internals.</p></div><div data-zenaura="e772b09600122039" class="controls"><button data-zenaura="e772b0960012203940" class="expand-btn"py-click="features_drop_down.toggle"  name="intuitive_ui_building">Intuitive UI Building</button><p data-zenaura="e772b0960012203941" class="featureParagraph" style="display: none;">Craft beautiful and user-friendly interfaces effortlessly using a declarative syntax and a rich set of pre-built UI components. This approach simplifies UI development, enhances readability, and promotes consistency throughout your application.</p></div></div><div data-zenaura="e772b096001221" class="column"><div data-zenaura="e772b09600122130" class="expandable-content" style="display: block;"><div data-zenaura="e772b0960012213040" class="code-section "><pre data-zenaura="e772b096001221304050"><code data-zenaura="e772b09600122130405060" class="language-python">
-# Counter Component
+        <div data-zenaura="72e7e09f"><header data-zenaura="6d9a6c21"><nav data-zenaura="6d9a6c2100">v0.9.93-alpha<ul data-zenaura="6d9a6c210011"><li data-zenaura="6d9a6c21001120"><a data-zenaura="6d9a6c2100112030" href="#">Learn</a></li><li data-zenaura="6d9a6c21001121"><a data-zenaura="6d9a6c2100112130" href="#">API Reference</a></li></ul></nav></header><section data-zenaura="9c6e3bc4" class="intro"><div data-zenaura="9c6e3bc400" class="introHeaders"><h1 data-zenaura="9c6e3bc40010">The Python Library For</h1><h1 data-zenaura="9c6e3bc40011">Building Modern Web User Interface</h1></div><button data-zenaura="9c6e3bc401" class="intro-btn-1">Start Creating</button><button data-zenaura="9c6e3bc402" class="intro-btn-2">API Reference</button></section><section data-zenaura="20a6b6b4" class="features"><div data-zenaura="20a6b6b400" class="container"><div data-zenaura="20a6b6b40010" class="examplesPara"><h1 data-zenaura="20a6b6b4001020">Components-Based User Interfaces</h1><p data-zenaura="20a6b6b4001021">
+                        Zenaura empowers developers to craft user interfaces entirely
+                        using Python. With Zenaura, they can effortlessly 
+                        decompose their code into modular components, 
+                        define pages mapped to routes, all within an 
+                        Object-oriented paradigm. 
+                        This approach enhances maintainability, scalability, 
+                        and performance, offering a seamless development experience.
+                    </p></div><div data-zenaura="20a6b6b40011" class="row"><div data-zenaura="20a6b6b4001120" class="column"><div data-zenaura="20a6b6b400112030" class="controlsActive"><button data-zenaura="20a6b6b40011203040" class="expand-btn"py-click="features_drop_down.toggle"  name="simplified_cognition">Simplified Cognition</button><p data-zenaura="20a6b6b40011203041" class="featureParagraph" style="display: block;">Enjoy a smoother learning curve and faster development process with simplified cognitive load. With intuitive APIs, clear documentation, and well-structured code patterns, you can focus on building your application logic instead of struggling with complex framework internals.</p></div><div data-zenaura="20a6b6b400112031" class="controls"><button data-zenaura="20a6b6b40011203140" class="expand-btn"py-click="features_drop_down.toggle"  name="intuitive_ui_building">Intuitive UI Building</button><p data-zenaura="20a6b6b40011203141" class="featureParagraph" style="display: none;">Craft beautiful and user-friendly interfaces effortlessly using a declarative syntax and a rich set of pre-built UI components. This approach simplifies UI development, enhances readability, and promotes consistency throughout your application.</p></div><div data-zenaura="20a6b6b400112032" class="controls"><button data-zenaura="20a6b6b40011203240" class="expand-btn"py-click="features_drop_down.toggle"  name="components">Stateful Components</button><p data-zenaura="20a6b6b40011203241" class="featureParagraph" style="display: none;">Empower your application with the ability to manage dynamic content that reacts to user interactions and internal state changes. Stateful components can store data, update their appearance based on user action, making them essential for building interactive and responsive user interfaces.</p></div><div data-zenaura="20a6b6b400112033" class="controls"><button data-zenaura="20a6b6b40011203340" class="expand-btn"py-click="features_drop_down.toggle"  name="pages">Pages</button><p data-zenaura="20a6b6b40011203341" class="featureParagraph" style="display: none;">Structure your application as a collection of distinct pages, each representing a different view or section. This approach enhances user navigation and allows you to organize your components and UI elements logically, improving the overall user experience.</p></div><div data-zenaura="20a6b6b400112034" class="controls"><button data-zenaura="20a6b6b40011203440" class="expand-btn"py-click="features_drop_down.toggle"  name="server_side_rendering">Server-Side Rendering (SSR)</button><p data-zenaura="20a6b6b40011203441" class="featureParagraph" style="display: none;">Leverage the power of server-side rendering to generate HTML on the server before sending it to the client. SSR can significantly improve initial page load times, enhance SEO (Search Engine Optimization) by making your content more accessible to search engines, and provide a smoother user experience, especially on slower connections or devices.</p></div><div data-zenaura="20a6b6b400112035" class="controls"><button data-zenaura="20a6b6b40011203540" class="expand-btn"py-click="features_drop_down.toggle"  name="asynchronous_virtual_dom">Asynchronous Virtual DOM</button><p data-zenaura="20a6b6b40011203541" class="featureParagraph" style="display: none;">Optimize your application&#x27;s UI updates by employing an asynchronous virtual DOM. This technique allows the framework to intelligently track changes in your component data and update only the necessary parts of the real DOM, minimizing unnecessary re-renders and leading to a more performant and responsive user interface.</p></div><div data-zenaura="20a6b6b400112036" class="controls"><button data-zenaura="20a6b6b40011203640" class="expand-btn"py-click="features_drop_down.toggle"  name="built_in_router">Built-in Router</button><p data-zenaura="20a6b6b40011203641" class="featureParagraph" style="display: none;">Enable seamless navigation within your application using a built-in router. Routers handle the mapping of URLs to specific components or pages, allowing users to move between different sections of your application without requiring full page reloads, resulting in a smoother and more engaging user experience.</p></div><div data-zenaura="20a6b6b400112037" class="controls"><button data-zenaura="20a6b6b40011203740" class="expand-btn"py-click="features_drop_down.toggle"  name="signals">Signals</button><p data-zenaura="20a6b6b40011203741" class="featureParagraph" style="display: none;">Simplify the management of application state and facilitate communication between components by using signals. Signals provide a reactive way to propagate data changes throughout your application, allowing components to react to updates and stay in sync without complex manual event handling.</p></div><div data-zenaura="20a6b6b400112038" class="controls"><button data-zenaura="20a6b6b40011203840" class="expand-btn"py-click="features_drop_down.toggle"  name="dependency_injection">Dependency Injection (DI)</button><p data-zenaura="20a6b6b40011203841" class="featureParagraph" style="display: none;">Streamline the management of dependencies between components using dependency injection. DI makes your code more modular, testable, and maintainable by allowing components to declare their dependencies explicitly and receive them from an external injector, promoting loose coupling and flexibility.</p></div><div data-zenaura="20a6b6b400112039" class="controls"><button data-zenaura="20a6b6b40011203940" class="expand-btn"py-click="features_drop_down.toggle"  name="lifecycle_methods">Lifecycle Methods</button><p data-zenaura="20a6b6b40011203941" class="featureParagraph" style="display: none;">Gain fine-grained control over the behavior of your components at different stages of their existence. Lifecycle methods, such as `attached`, `on_mutation`, and `on_settled`, allow you to execute code when a component is created, before it updates, or after it updates in the DOM, enabling you to perform tasks like fetching data, initializing state, and cleaning up resources.</p></div></div><div data-zenaura="20a6b6b4001121" class="column"><div data-zenaura="20a6b6b400112130" class="expandable-content"style="display: block;"  class=""><div data-zenaura="20a6b6b40011213040" class="code-section "><div data-zenaura="20a6b6b4001121304050" class="codeWrapper"><pre data-zenaura="20a6b6b400112130405060"><code data-zenaura="20a6b6b40011213040506070" class="language-python">
+def Image(src, alt, width, height):
+    return Builder(&quot;img&quot;).with_attributes(
+        src=src,
+        alt=alt,
+        width=width,
+        height=height
+    ).build()
+    
+def Header1(text):
+    return Builder(&#x27;h1&#x27;).with_text(text).build()
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112131" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213140" class="code-section "><div data-zenaura="20a6b6b4001121314050" class="codeWrapper"><pre data-zenaura="20a6b6b400112131405060"><code data-zenaura="20a6b6b40011213140506070" class="language-python">
+from zenaura.client.component import Component
+from zenaura.client.page import Page
+def NavItem(href, text):
+    return Builder(&#x27;li&#x27;).with_child(
+        Builder(&#x27;a&#x27;).with_attribute(&#x27;href&#x27;, href).with_text(text).build()
+    ).build()
+
+def NavList(items):
+    return Node(&quot;ul&quot;, children=items)
+    
+class Header(Component):
+    def render(self):
+        return Builder(&quot;header&quot;).with_child(
+            Builder(&quot;nav&quot;).with_children(
+                Node(text=&quot;v0.9.93-alpha&quot;), 
+                NavList([
+                NavItem(&quot;#&quot;, &quot;Learn&quot;),
+                NavItem(&quot;#&quot;, &quot;API Reference&quot;),
+                ])
+            ).build()
+        ).build()
+        
+top_bar = Header()
+landing_page = Page([top_bar])
+
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112132" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213240" class="code-section "><div data-zenaura="20a6b6b4001121324050" class="codeWrapper"><pre data-zenaura="20a6b6b400112132405060"><code data-zenaura="20a6b6b40011213240506070" class="language-python">
+from zenaura.client.component import Component
+from zenaura.client.mutator import mutator
+
+from zenaura.client.component import Component
+from zenaura.client.mutator import mutator
+
 class Counter(Component):
-    def __init__(self):
-        super().__init__()
-        self.count = 0  # Initial state
+  def __init__(self, dependencies):
+      super().__init__()
+      self.set_state({&quot;count&quot;: 0})
+      self.dependencies = dependencies
+      self.instance_name = dependencies[&quot;instance_name&quot;]
 
-    def increment(self):
-        self.count += 1
+  @mutator
+  async def increment_counter1(self, event) -&gt; None:
+      self.set_state(
+      {&quot;count&quot;: self.get_state()[&quot;count&quot;] + 1}
+      )
 
-    def view(self):
-        return Div(&quot;counter&quot;, [
-            Button(&quot;Increment&quot;, on_click=self.increment),
-            Text(f&quot;Count:&quot;)
-        ])
-</code></pre></div></div><div data-zenaura="e772b09600122131" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213140" class="code-section "><pre data-zenaura="e772b096001221314050"><code data-zenaura="e772b09600122131405060" class="language-python">
-# Router Configuration
-router = Router([
-    (&quot;/&quot;, HomePage),
-    (&quot;/about&quot;, AboutPage),
-    (&quot;/contact&quot;, ContactPage)
-])
-</code></pre></div></div><div data-zenaura="e772b09600122132" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213240" class="code-section "><pre data-zenaura="e772b096001221324050"><code data-zenaura="e772b09600122132405060" class="language-python">
-# Server-Side Rendering with a Framework (Example with Flask)
-from flask import Flask, render_template
+  @mutator
+  async def decrease_counter1(self, event) -&gt; None:
+      self.set_state(
+      {&quot;count&quot;: self.get_state()[&quot;count&quot;] - 1}
+      )
 
-app = Flask(__name__)
 
-@app.route(&quot;/&quot;)
-def home():
-    data = {&quot;title&quot;: &quot;My Website&quot;, &quot;content&quot;: &quot;Welcome to my SSR-powered website!&quot;}
-    return render_template(&quot;index.html&quot;, **data)
-</code></pre></div></div><div data-zenaura="e772b09600122133" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213340" class="code-section "><pre data-zenaura="e772b096001221334050"><code data-zenaura="e772b09600122133405060" class="language-python">
-# Simplified Virtual DOM Diffing (Conceptual)
-def update_dom(old_node, new_node):
-    if old_node.type != new_node.type:
-        # Replace the entire node
-        old_node.replace_with(new_node)
-    else:
-        # Update attributes
-        for attr, value in new_node.attributes.items():
-            old_node.set_attribute(attr, value)
-        # Recursively update children
-        for i in range(len(new_node.children)):
-            update_dom(old_node.children[i], new_node.children[i])
-</code></pre></div></div><div data-zenaura="e772b09600122134" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213440" class="code-section "><pre data-zenaura="e772b096001221344050"><code data-zenaura="e772b09600122134405060" class="language-python">
-# Navigation with a Built-in Router
-def navigate_to_about():
-    router.push(&quot;/about&quot;)  # Navigate to the about page
+  def render(self) -&gt; Node:
+      return Builder(&quot;div&quot;).with_child(
+        CounterPresntaional(
+          increaseBtn=Button(
+            &quot;-&quot;,
+            f&quot;{self.instance_name}.decrease_counter1&quot;),
+          decreaseBtn=Button(
+            &quot;+&quot;, 
+            f&quot;{self.instance_name}.increment_counter1&quot;
+          ),
+          headertext=f&quot;Count 1: {self.get_state()[&#x27;count&#x27;]}&quot;,
+          count=self.get_state()[&quot;count&quot;]
+        )
+      ).build()
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112133" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213340" class="code-section "><div data-zenaura="20a6b6b4001121334050" class="codeWrapper"><pre data-zenaura="20a6b6b400112133405060"><code data-zenaura="20a6b6b40011213340506070" class="language-python">
+counter = Counter({&quot;instance_name&quot;: &quot;counter1&quot;})
+counters_page = Page([counter1])
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112134" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213440" class="code-section "><div data-zenaura="20a6b6b4001121344050" class="codeWrapper"><pre data-zenaura="20a6b6b400112134405060"><code data-zenaura="20a6b6b40011213440506070" class="language-python">
+from flask import Flask
+from public.main import counters_page
+from zenaura.server import ZenauraServer
 
-Button(&quot;Go to About&quot;, on_click=navigate_to_about)
-</code></pre></div></div><div data-zenaura="e772b09600122135" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213540" class="code-section "><pre data-zenaura="e772b096001221354050"><code data-zenaura="e772b09600122135405060" class="language-python">
-# Signal Usage
-user_logged_in = Signal()
+app = Flask(__name__,
+            static_folder=&quot;public&quot;
+            )
 
-def on_login_success(user_data):
-    user_logged_in.emit(user_data)  # Notify other components
+@app.route(&#x27;/ssr&#x27;)
+def ssr():    
+    # Render the main HTML template with the rendered component
+    return ZenauraServer.hydrate_page(counters_page)
+    
+if __name__ == &quot;__main__&quot;:
+    app.run()
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112135" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213540" class="code-section "><div data-zenaura="20a6b6b4001121354050" class="codeWrapper"><pre data-zenaura="20a6b6b400112135405060"><code data-zenaura="20a6b6b40011213540506070" class="language-python">
+from zenaura.client.component import Component
+from zenaura.client.mutator import mutator
 
-user_logged_in.connect(update_profile_component)  # Listen for login event
-</code></pre></div></div><div data-zenaura="e772b09600122136" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213640" class="code-section "><pre data-zenaura="e772b096001221364050"><code data-zenaura="e772b09600122136405060" class="language-python">
-# Dependency Injection (Conceptual)
-class MyComponent:
-    def __init__(self, api_client: ApiClient):  # Inject the dependency
-        self.api_client = api_client
+class NonBlookingVirtualDom(Component):
 
-    def fetch_data(self):
-        return self.api_client.get_data()
-</code></pre></div></div><div data-zenaura="e772b09600122137" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213740" class="code-section "><pre data-zenaura="e772b096001221374050"><code data-zenaura="e772b09600122137405060" class="language-python">
-# Lifecycle Methods
-class MyComponent(Component):
-    def on_mount(self):
-        # Fetch initial data, set up event listeners, etc.
-        pass
+  @mutator
+  async def non_blocking_updates1(self, event) -&gt; None:
+      pass
 
-    def on_update(self, previous_props):
-        # Handle changes in component properties
-        pass
+  @mutator
+  async def non_blocking_updates2(self, event) -&gt; None:
+	  pass
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112136" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213640" class="code-section "><div data-zenaura="20a6b6b4001121364050" class="codeWrapper"><pre data-zenaura="20a6b6b400112136405060"><code data-zenaura="20a6b6b40011213640506070" class="language-python">
+from zenaura.client.app import Route, App 
+# from above page example counters_page = Page[counter]
+router = App()
+router.add_route(Route(
+		title=&quot;counter&quot;,
+		path=&quot;/counter&quot;,
+		page=counters_page
+))
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112137" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213740" class="code-section "><div data-zenaura="20a6b6b4001121374050" class="codeWrapper"><pre data-zenaura="20a6b6b400112137405060"><code data-zenaura="20a6b6b40011213740506070" class="language-python">
+from zenaura.client.observer import Subject, Observer
+GlobalCounterSubject = Subject()
+GlobalCounterSubject.state = {&quot;counter&quot;: 1}
 
-    def on_unmount(self):
-        # Clean up resources (timers, event listeners)
-        pass
-</code></pre></div></div><div data-zenaura="e772b09600122138" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213840" class="code-section "><pre data-zenaura="e772b096001221384050"><code data-zenaura="e772b09600122138405060" class="language-python">
-# Simplified Syntax for Creating UI Elements
-Div(&quot;container&quot;, [
-    H1(&quot;Welcome to my app&quot;),
-    Button(&quot;Click me&quot;)
-])
-</code></pre></div></div><div data-zenaura="e772b09600122139" class="expandable-content" style="display: none;"><div data-zenaura="e772b0960012213940" class="code-section "><pre data-zenaura="e772b096001221394050"><code data-zenaura="e772b09600122139405060" class="language-python">
-# Declarative UI Definition
-class MyPage(Component):
-    def view(self):
-        return Div(&quot;page-content&quot;, [
-            H1(&quot;Page Title&quot;),
-            P(&quot;Some paragraph text.&quot;),
-            # ... other UI elements
-        ])
-</code></pre></div></div></div></div></div></section></div>
+class GlobalCounterObserver1(Observer):
+    def update(self, value):
+        if value &gt; 4:
+            print(&quot;counter value &gt; 4&quot;)
+
+observer1 = GlobalCounterObserver1()
+
+GlobalCounterSubject.attach(observer1)
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112138" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213840" class="code-section "><div data-zenaura="20a6b6b4001121384050" class="codeWrapper"><pre data-zenaura="20a6b6b400112138405060"><code data-zenaura="20a6b6b40011213840506070" class="language-python">
+from zenaura.client.component import Component
+
+class DependencyInjection(Component):
+	def __init__(self, dependencies):
+		self.api = dependencies[&quot;api&quot;]
+	pass # use dependency inside the component
+	
+di = DependencyInjection({&quot;api&quot;: &quot;https://api.com/v1&quot;})
+</code></pre></div></div></div><div data-zenaura="20a6b6b400112139" class="expandable-content"style="display: none;"  class=""><div data-zenaura="20a6b6b40011213940" class="code-section "><div data-zenaura="20a6b6b4001121394050" class="codeWrapper"><pre data-zenaura="20a6b6b400112139405060"><code data-zenaura="20a6b6b40011213940506070" class="language-python">
+from zenaura.client.component import Component
+from zenaura.client.mutator import mutator
+
+class DependencyInjection(Component):
+	
+	@mutator
+	async def attached(self):
+		# do something when component mounts
+		# fetch data and attach it to component and so on.
+		
+	async def on_mutation(self):
+		# do something before the component mutates and renders
+		
+	async def on_settled(self):
+		# do something when update finish and component renders
+</code></pre></div></div></div></div></div></div></section><footer data-zenaura="82f92bbf">Zenaura@2024</footer></div>
     </div>
   
   </body>

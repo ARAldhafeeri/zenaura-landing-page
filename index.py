@@ -15,10 +15,6 @@ def root():
     return send_file('public/index.html')
 
 
-    
-
-
-
 if __name__ == "__main__":
     ZenauraServer.hydrate_app(router)
     app.run()

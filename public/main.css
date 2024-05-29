@@ -24,17 +24,7 @@ html{ overflow-y: scroll;}
 header {
   background-color: #282c34;
   color: white;
-  padding: 0.3rem;
-}
-
-header.light-theme {
-  background-color: #f0f0f0;
-  color: #000;
-}
-
-header.dark-theme {
-  background-color: #1f232a;
-  color: #eee;
+  height: 50px;
 }
 
 nav ul {
@@ -70,7 +60,11 @@ code {
   border-radius: 15px;
 }
 
-
+.navbarLogo {
+  position: relative;
+  left: -10px;
+  top: -5px;
+}
 .intro {
   text-align: center;
   background-color: #31363F;

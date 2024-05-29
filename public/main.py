@@ -24,3 +24,4 @@ router.add_route(Route(
 # Run the application
 event_loop = asyncio.get_event_loop()
 event_loop.run_until_complete(router.handle_location())
+

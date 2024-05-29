@@ -69,11 +69,15 @@ p {
 code {
   border-radius: 15px;
 }
+
+
 .intro {
   text-align: center;
   background-color: #31363F;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   width : 100%;
 }
 
@@ -81,6 +85,7 @@ code {
   display: flex;
   max-width: fit-content;
   margin-inline: auto;
+
 }
 
 .introHeaders h1 {
@@ -89,9 +94,10 @@ code {
 }
 
 .features {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: #222831 ;
-  padding-top: 30px;
-  min-height: 1200px;
+  min-height: 1000px;
 }
 
   

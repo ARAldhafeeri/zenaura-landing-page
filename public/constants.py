@@ -54,43 +54,24 @@ landing_page = Page([top_bar])
 from zenaura.client.component import Component
 from zenaura.client.mutator import mutator
 
-from zenaura.client.component import Component
-from zenaura.client.mutator import mutator
-
 class Counter(Component):
-  def __init__(self, dependencies):
-      super().__init__()
-      self.set_state({"count": 0})
-      self.dependencies = dependencies
-      self.instance_name = dependencies["instance_name"]
+  def __init__(self):
+      self.count = 0
 
   @mutator
-  async def increment_counter1(self, event) -> None:
-      self.set_state(
-      {"count": self.get_state()["count"] + 1}
-      )
+  async def increment(self, event) -> None:
+    #increment count and mutates ui
+    pass
 
   @mutator
-  async def decrease_counter1(self, event) -> None:
-      self.set_state(
-      {"count": self.get_state()["count"] - 1}
-      )
+  async def decrement(self, event) -> None:
+    # decrement count mutates ui
+    pass
 
 
   def render(self) -> Node:
-      return Builder("div").with_child(
-        CounterPresntaional(
-          increaseBtn=Button(
-            "-",
-            f"{self.instance_name}.decrease_counter1"),
-          decreaseBtn=Button(
-            "+", 
-            f"{self.instance_name}.increment_counter1"
-          ),
-          headertext=f"Count 1: {self.get_state()['count']}",
-          count=self.get_state()["count"]
-        )
-      ).build()
+    # ui code
+    pass
 """),
     Feature(
         "Pages",
@@ -98,8 +79,12 @@ class Counter(Component):
         "pages", 
         "Structure your application as a collection of distinct pages, each representing a different view or section. This approach enhances user navigation and allows you to organize your components and UI elements logically, improving the overall user experience.",
          """
-counter = Counter({"instance_name": "counter1"})
-counters_page = Page([counter1])
+from zenaura.client.component import Component
+from zenaura.client.page import Page
+class Counter(Component):
+    pass
+counter = Counter()
+counters_page = Page([counter])
 """
         ),
     Feature(
@@ -146,11 +131,19 @@ class NonBlookingVirtualDom(Component):
 """
         ),
     Feature(
-        "Built-in Router", False, "built_in_router", "Enable seamless navigation within your application using a built-in router. Routers handle the mapping of URLs to specific components or pages, allowing users to move between different sections of your application without requiring full page reloads, resulting in a smoother and more engaging user experience.",
+        "Built-in Client Router", False, "built_in_router", "Enable seamless navigation within your application using a built-in router. Routers handle the mapping of URLs to specific components or pages, allowing users to move between different sections of your application without requiring full page reloads, resulting in a smoother and more engaging user experience.",
         """
 from zenaura.client.app import Route, App 
-# from above page example counters_page = Page[counter]
+from zenaura.client.component import Component
+from zenaura.client.page import Page
+
+class Counter(Component):
+    pass
+counter = Counter()
+counters_page = Page([counter])
+
 router = App()
+
 router.add_route(Route(
 		title="counter",
 		path="/counter",

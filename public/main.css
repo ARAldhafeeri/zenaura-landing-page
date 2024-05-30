@@ -21,25 +21,6 @@ body.loading .loader {
 }
 html{ overflow-y: scroll;}
 
-header {
-  background-color: #282c34;
-  color: white;
-  height: 50px;
-}
-
-nav ul {
-  list-style: none;
-  display: inline-flex;
-  gap: 1rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-nav a:hover {
-  border-bottom: 1px solid  #f0f0f0;
-}
 main {
   padding: 2rem;
 }
@@ -60,11 +41,59 @@ code {
   border-radius: 15px;
 }
 
+img { 
+  object-fit:cover;
+}
+
+
+/* nav bar  */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.navbar .left, .navbar .center, .navbar .right {
+  display: flex;
+  flex-direction: row;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+}
+.navbar .center {
+  flex-grow: 1;
+  justify-content: center;
+}
+.navbar .right {
+  justify-content: flex-end;
+}
+
+.navbar a:hover{
+    border-bottom: 1px solid  #f0f0f0;
+}
+
 .navbarLogo {
   position: relative;
-  left: -10px;
-  top: -5px;
+  left: -5px;
 }
+
+.socialIcons {
+  margin: 5px 10px 1px 5px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+/*  sections  */
 .intro {
   text-align: center;
   background-color: #31363F;
@@ -84,7 +113,7 @@ code {
 
 .introHeaders h1 {
   font-size: 2.5rem;
-  color: #76ABAE
+  color: #76ABAE;
 }
 
 .features {
@@ -414,3 +443,4 @@ footer {
     padding: 5px 10px;
   }
 }
+

@@ -7,22 +7,28 @@ from zenaura.client.dom import zenaura_dom
 
 class Header(Component):
     def render(self):
-        return Builder("header").with_child(
-            Builder("nav").with_children(
-                NavList([
-                Image("./public/logo.png", "zenaura", "40", "40", "navbarLogo"),
-                NavItem("#", "Learn"),
-                NavItem("#", "API Reference"),
-                ])
-            ).build()
-        ).build()
+        return Div("navbar", [
+            Div("left", [
+                Image("./public/logo.png", "zenaura", "55", "55", "navbarLogo"),
+                NavItemText("#", "Docs"),
+                NavItemText("#", "APIs"),
+            ]),
+            Div("center", [
+                NavItemIcon("#",  Image("./public/linkedin.png", "zenaura", "33", "33", "socialIcons")),
+                NavItemIcon("#",  Image("./public/gmail.png", "zenaura", "33", "33", "socialIcons")),
+                NavItemIcon("#",  Image("./public/github.png", "zenaura", "33", "33", "socialIcons")),
+            ]),
+            Div("right", [
+               Paragraph("v0.9.96-alpha")
+            ])
+        ])
     
 
 class IntroSection(Component):
     def render(self):
         return Section([
             Div("introHeaders", [
-                Header1("The Python Library For"),
+                Header1("The Python Library For UI pythonistas"),
                 Header1("Building Modern Web User Interface")
             ]),
             Button("intro-btn-1", "Start Creating"),
@@ -80,7 +86,6 @@ class DropDown(Component):
 
     async def attached(self):
         await asyncio.sleep(0.8)
-        await zenaura_dom.render(self)
         self.state.features[0].active = True
         await self.animate_transition(0)
 

@@ -2,14 +2,12 @@ from zenaura.client.tags.builder import Builder
 from zenaura.client.component import Component
 from zenaura.client.tags.node import Node, Attribute
 
-def NavItem(href, text):
-    return Builder('li').with_child(
-        Builder('a').with_attribute('href', href).with_text(text).build()
-    ).build()
+def NavItemText(href, text):
+    return Builder('a').with_attribute('href', href).with_text(text).build()
 
-def NavList(items):
-    return Node("ul", children=items)
- 
+def NavItemIcon(href, img):
+    return  Builder('a').with_attribute('href', href).with_child(img).build()
+
 def Image(src, alt, width, height, classname=""):
     return Builder("img").with_attributes(
         src=src,

@@ -53,7 +53,6 @@ img {
   justify-content: space-between;
   align-items: center;
   background-color: #333;
-  padding: 10px;
   background-color: #282c34;
   color: white;
   font-size: 1.2rem;
@@ -87,11 +86,13 @@ img {
 }
 
 .socialIcons {
-  margin: 5px 10px 1px 5px;
-  height: 33px;
-  width: 33px;
+  margin: 2px;
+  padding: 2px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
 }
+
 
 /*  sections  */
 .intro {
@@ -99,8 +100,8 @@ img {
   background-color: #31363F;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   width : 100%;
 }
 
@@ -117,10 +118,10 @@ img {
 }
 
 .features {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: #222831 ;
-  min-height: 1000px;
+  min-height: 1200px;
 }
 
   
@@ -347,7 +348,7 @@ pre {
 /*  code wrapper animation */
 
 .codeWrapper {
-  transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
   opacity: 1;
   transform: translateY(0) rotateY(0deg);
 }
@@ -355,7 +356,7 @@ pre {
 /* Initial state for entering element */
 .codeWrapper-enter {
   opacity: 0;
-  transform: translateY(-20px) rotateY(-90deg);
+  transform: translateY(-5px) rotateY(-90deg);
 }
 
 /* State for entering element after it's inserted in the DOM */
@@ -367,13 +368,13 @@ pre {
 /* Initial state for exiting element */
 .codeWrapper-exit {
   opacity: 1;
-  transform: translateY(0) rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 /* State for exiting element after transition starts */
 .codeWrapper-exit-active {
   opacity: 0;
-  transform: translateY(20px) rotateY(90deg);
+  transform: rotateY(90deg);
 }
 
 footer {

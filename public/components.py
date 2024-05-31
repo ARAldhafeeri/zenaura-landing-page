@@ -25,10 +25,11 @@ class Header(Component):
     
 
 class IntroSection(Component):
+
     def render(self):
         return Section([
             Div("introHeaders", [
-                Header1("The Python Library For UI pythonistas"),
+                Header1("The Python Library For dfedwsd"),
                 Header1("Building Modern Web User Interface")
             ]),
             Button("intro-btn-1", "Start Creating"),
@@ -70,7 +71,7 @@ class DropDown(Component):
         await zenaura_dom.render(self)
 
         # Wait for the transition to complete (800ms)
-        await asyncio.sleep(0.8)
+        await asyncio.sleep(0.4)
 
         # Update classes to their final state
         for idx, feature in enumerate(self.state.features):
@@ -83,7 +84,10 @@ class DropDown(Component):
         
         # Re-render component to apply the final classes
         await zenaura_dom.render(self)
-
+        
+        # Wait for the transition to complete (800ms)
+        await asyncio.sleep(0.4)
+        
     async def attached(self):
         await asyncio.sleep(0.8)
         self.state.features[0].active = True

@@ -4,7 +4,6 @@ from zenaura.client.mutator import mutator
 from public.presentational import * 
 from public.constants import init_state_features
 from zenaura.client.dom import zenaura_dom
-
 class Header(Component):
     def render(self):
         return Div("navbar", [
@@ -29,7 +28,7 @@ class IntroSection(Component):
     def render(self):
         return Section([
             Div("introHeaders", [
-                Header1("The Python Library For dfedwsd"),
+                Header1("The Python Library For Pythonistas! sdfe !"),
                 Header1("Building Modern Web User Interface")
             ]),
             Button("intro-btn-1", "Start Creating"),

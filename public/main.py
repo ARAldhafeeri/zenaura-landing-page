@@ -1,7 +1,7 @@
 from zenaura.client.app import Route, App
 from zenaura.client.page import Page
 from public.routes import ClientRoutes
-from public.components import *
+from public.components import Header, IntroSection, DropDown, Footer
 import asyncio
 
 # Instantiate components

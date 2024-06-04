@@ -1,6 +1,6 @@
 from zenaura.server import ZenauraServer
 from public.main import router
-print('ran build')
+
 ZenauraServer.hydrate_app(router, scripts=[
         '<link rel="stylesheet" href="public/gigavolt.min.css">',
         '<script src="public/highlight.min.js"></script>',  

@@ -13,7 +13,7 @@ def Image(src, alt, width, height):
     
 def Header1(text):
     return Builder('h1').with_text(text).build()
-"""
+""",idx=0
         ),
     Feature(
         "Intuitive UI Building", False, "intuitive_ui_building", "Craft beautiful and user-friendly interfaces effortlessly using a declarative syntax and a rich set of pre-built UI components. This approach simplifies UI development, enhances readability, and promotes consistency throughout your application.",
@@ -43,7 +43,8 @@ class Header(Component):
 top_bar = Header()
 landing_page = Page([top_bar])
 
-"""
+""",
+idx=1
         ),
     Feature(
         "Stateful Components",
@@ -72,7 +73,8 @@ class Counter(Component):
   def render(self) -> Node:
     # ui code
     pass
-"""),
+""",
+idx=2),
     Feature(
         "Pages",
         False,
@@ -85,7 +87,8 @@ class Counter(Component):
     pass
 counter = Counter()
 counters_page = Page([counter])
-"""
+""",
+idx=3
         ),
     Feature(
         "Server-Side Rendering (SSR)",
@@ -108,7 +111,8 @@ def ssr():
     
 if __name__ == "__main__":
     app.run()
-"""
+""",
+idx=4
         ),
     Feature(
         "Asynchronous Virtual DOM",
@@ -128,7 +132,8 @@ class NonBlookingVirtualDom(Component):
   @mutator
   async def non_blocking_updates2(self, event) -> None:
 	  pass
-"""
+""",
+idx=5
         ),
     Feature(
         "Built-in Client Router", False, "built_in_router", "Enable seamless navigation within your application using a built-in router. Routers handle the mapping of URLs to specific components or pages, allowing users to move between different sections of your application without requiring full page reloads, resulting in a smoother and more engaging user experience.",
@@ -149,7 +154,8 @@ router.add_route(Route(
 		path="/counter",
 		page=counters_page
 ))
-"""
+""",
+idx=6
         ),
     Feature(
         "Signals", False, "signals", "Simplify the management of application state and facilitate communication between components by using signals. Signals provide a reactive way to propagate data changes throughout your application, allowing components to react to updates and stay in sync without complex manual event handling.",
@@ -166,7 +172,8 @@ class GlobalCounterObserver1(Observer):
 observer1 = GlobalCounterObserver1()
 
 GlobalCounterSubject.attach(observer1)
-"""
+""",
+idx=7
         ),
     Feature(
         "Dependency Injection (DI)", False, "dependency_injection", "Streamline the management of dependencies between components using dependency injection. DI makes your code more modular, testable, and maintainable by allowing components to declare their dependencies explicitly and receive them from an external injector, promoting loose coupling and flexibility.",
@@ -179,7 +186,8 @@ class DependencyInjection(Component):
 	pass # use dependency inside the component
 	
 di = DependencyInjection({"api": "https://api.com/v1"})
-"""
+""",
+idx=8
         ),
     Feature(
         "Lifecycle Methods", False, "lifecycle_methods", "Gain fine-grained control over the behavior of your components at different stages of their existence. Lifecycle methods, such as `attached`, `on_mutation`, and `on_settled`, allow you to execute code when a component is created, before it updates, or after it updates in the DOM, enabling you to perform tasks like fetching data, initializing state, and cleaning up resources.",
@@ -199,6 +207,7 @@ class DependencyInjection(Component):
 		
 	async def on_settled(self):
 		# do something when update finish and component renders
-"""
+""",
+idx=9
         ),
 ])

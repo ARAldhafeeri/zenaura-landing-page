@@ -121,7 +121,7 @@ img {
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: #222831 ;
-  min-height: 1200px;
+  min-height: 900px;
 }
 
   
@@ -172,9 +172,10 @@ img {
 /*  features showcase */
 
 .container {
-  width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .subtitle {
   text-align: center;
@@ -291,8 +292,15 @@ pre {
 }
 
 .examplesPara {
-  margin-bottom: 100px;
-  max-width: fit-content;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.examplesPara p {
+  width: 700px;
 }
 .controlsActive {
   border-left: 3px solid #EEEEEE;
@@ -345,36 +353,34 @@ pre {
 }
 
 
-/*  code wrapper animation */
-
 .codeWrapper {
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-  opacity: 1;
-  transform: translateY(0) rotateY(0deg);
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
 }
 
-/* Initial state for entering element */
-.codeWrapper-enter {
-  opacity: 0;
-  transform: translateY(-5px) rotateY(-90deg);
-}
 
-/* State for entering element after it's inserted in the DOM */
-.codeWrapper-enter-active {
-  opacity: 1;
-  transform: translateY(0) rotateY(0deg);
-}
-
-/* Initial state for exiting element */
-.codeWrapper-exit {
-  opacity: 1;
-  transform: rotateY(0deg);
-}
-
-/* State for exiting element after transition starts */
+.codeWrapper-enter-active,
 .codeWrapper-exit-active {
-  opacity: 0;
-  transform: rotateY(90deg);
+  visibility: visible; /* Show the card during the flip */
+}
+
+.codeWrapper-enter {
+  transform: perspective(666px) rotateY(-90deg);
+}
+
+.codeWrapper-enter-active {
+  transform: perspective(666px) rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.codeWrapper-exit {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.codeWrapper-exit-active {
+  transform: perspective(1500px) rotateY(90deg);
 }
 
 footer {
@@ -445,3 +451,106 @@ footer {
   }
 }
 
+/*  game of life css */
+
+
+.gridcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #31363F;
+  padding: 20px;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(50, 1fr);
+  border: 1px solid #31363F;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.row {
+  display: flex;
+}
+.cell {
+  width: 10px;
+  height: 10px;
+  background-color: #76ABAE;
+  border: 1px solid #d8dadf;
+  cursor: pointer;
+}
+
+.cell.alive {
+  background-color: black;
+}
+
+
+.btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #76ABAE;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* CSS */
+.btn{
+  align-items: center;
+  background-color: #76ABAE;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.btn:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btnactive {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+
+.controlsGameOfLife {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

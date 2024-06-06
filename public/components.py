@@ -31,7 +31,7 @@ class IntroSection(Component):
     def render(self):
         return Section([
             Div("introHeaders", [
-                Header1("The Python Library For Pythonistas! e32 !"),
+                Header1("The Python Library For"),
                 Header1("Building Modern Web User Interface")
             ]),
             Button("intro-btn-1", "Start Creating"),

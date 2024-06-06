@@ -8,6 +8,7 @@ class Feature:
     description: str
     code_example: str 
     class_name: str = ""
+    idx: 0 = 0
 
 @dataclass
 class Features:

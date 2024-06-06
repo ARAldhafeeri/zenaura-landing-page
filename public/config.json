@@ -10,7 +10,7 @@
       }
     ],
     "packages": [
-      "zenaura==0.9.117"
+      "zenaura==0.9.118"
     ],
     "fetch": [
       {

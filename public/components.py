@@ -114,8 +114,10 @@ class DropDown(Component):
                         and performance, offering a seamless development experience.
                     """)
                 ]),
-                Div('row', [
-                    Div('column', [
+               
+            ]),
+             Div('row', [
+                    Div('column sticky', [
                         ExapandableContentButton(
                             Button('expand-btn', feature.title, f'{self.instance_name}.toggle', feature.name),
                             feature.description,
@@ -130,7 +132,6 @@ class DropDown(Component):
                         ) for feature in self.state.features 
                     ])
                 ])
-            ])
         ], "features")
     
 @dataclass
@@ -230,8 +231,10 @@ class GameOfLife(Component):
 
     @mutator
     async def start_stop(self, event):
+        print("start")
         self.state["running"] = not self.state["running"]
         while self.state["running"]:
+            await asyncio.sleep(0.003)
             await self.step(event)
 
     @mutator
@@ -333,7 +336,8 @@ class GameOfLife(Component):
                     Header1("Truly responsive, Conway's Game of Life approval"),
                     Paragraph("""
                  The optimized implementation of John Conway's Game of Life, developed at Cambridge in 1970, introduces a Zenaura twist. In this zero-player game, cells die each generation based on specific rules, and each generation has unique colors. Click on random grid squares and start the game, which will then run automatically with smooth animations. The game's performance improves with Zenaura's optimized virtual DOM, serving as a benchmark tool for testing virtual DOM performance.
-                    """)
+                    """),
+                    Paragraph("Note: This is in-browser game with exessive calculations, if you are experiencing slow simluation it's due to hardware limitation on your device.")
                 ]),
                 Div("controlsGameOfLife", [
                     Div("buttons", [

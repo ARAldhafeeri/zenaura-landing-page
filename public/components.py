@@ -21,9 +21,9 @@ class Header(Component):
                 NavItemText("https://araldhafeeri.github.io/Zenaura/", "APIs"),
             ]),
             Div("center", [
-                NavItemIcon("#",  Image("./public/linkedin.png", "zenaura", "33", "33", "socialIcons")),
-                NavItemIcon("#",  Image("./public/gmail.png", "zenaura", "33", "33", "socialIcons")),
-                NavItemIcon("#",  Image("./public/github.png", "zenaura", "33", "33", "socialIcons")),
+                NavItemIcon("https://www.linkedin.com/company/102984598/admin/feed/posts/",  Image("./public/linkedin.png", "zenaura", "33", "33", "socialIcons")),
+                NavItemIcon("mailto:ar.aldhafeeri11@gmail.com",  Image("./public/gmail.png", "zenaura", "33", "33", "socialIcons")),
+                NavItemIcon("https://github.com/ARAldhafeeri/Zenaura",  Image("./public/github.png", "zenaura", "33", "33", "socialIcons")),
             ]),
             Div("right", [
                Paragraph("v0.9.96-alpha")

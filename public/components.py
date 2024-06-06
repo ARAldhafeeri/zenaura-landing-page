@@ -29,8 +29,7 @@ class Header(Component):
                Paragraph("v0.9.96-alpha")
             ])
         ])
-    
-
+        
 class IntroSection(Component):
 
     def docs(self, event):

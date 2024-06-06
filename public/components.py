@@ -7,13 +7,18 @@ from public.constants import init_state_features
 from zenaura.client.dom import zenaura_dom
 from dataclasses import dataclass
 from zenaura.client.tags.builder import Builder
+from zenaura.client.mocks import MockWindow
+try :
+    from pyscript import window
+except:
+    window = MockWindow
 class Header(Component):
     def render(self):
         return Div("navbar", [
             Div("left", [
                 Image("./public/logo.png", "zenaura", "55", "55", "navbarLogo"),
-                NavItemText("#", "Docs"),
-                NavItemText("#", "APIs"),
+                NavItemText("https://araldhafeeri.github.io/Zenaura/", "Docs"),
+                NavItemText("https://araldhafeeri.github.io/Zenaura/", "APIs"),
             ]),
             Div("center", [
                 NavItemIcon("#",  Image("./public/linkedin.png", "zenaura", "33", "33", "socialIcons")),
@@ -28,14 +33,16 @@ class Header(Component):
 
 class IntroSection(Component):
 
+    def docs(self, event):
+        window.location = "https://araldhafeeri.github.io/Zenaura/"
     def render(self):
         return Section([
             Div("introHeaders", [
                 Header1("The Python Library For"),
                 Header1("Building Modern Web User Interface")
             ]),
-            Button("intro-btn-1", "Start Creating"),
-            Button("intro-btn-2", "API Reference")
+            Button("intro-btn-1", "Start Creating", "intro_section.docs"),
+            Button("intro-btn-2", "API Reference", "intro_section.docs")
         ], "intro")
     
 class Footer(Component):

@@ -43,10 +43,10 @@ def Div(class_name, children):
     div.children = children
     return div
 
-def Button(class_name, text, onclick_handler=None, name=None):
+def Button(class_name, text, id=None, name=None):
     builder = Builder('button').with_attribute('class', class_name).with_text(text)
-    if onclick_handler:
-        builder = builder.with_attribute('py-click', onclick_handler)
+    if id:
+        builder = builder.with_attribute('id', id)
     if name:
         builder = builder.with_attribute("name", name)
     return builder.build()
